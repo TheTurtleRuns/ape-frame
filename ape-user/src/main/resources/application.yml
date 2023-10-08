@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: wzz
+    password: wzz0504
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://1.117.180.137:3306/ape_frame?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20
+      min-idle: 20
+      max-active: 100
+      max-wait: 60000
