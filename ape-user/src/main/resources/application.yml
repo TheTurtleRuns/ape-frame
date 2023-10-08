@@ -10,3 +10,16 @@ spring:
       min-idle: 20
       max-active: 100
       max-wait: 60000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: admin
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true
+          slow-sql-millis: 2000
+sql:
+  beauty:
+    show: false

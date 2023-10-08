@@ -1,6 +1,9 @@
 package com.psj.common.mybatisplus.config;
 
+import com.psj.common.mybatisplus.inteceptor.SqlBeautyInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -12,5 +15,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan({ "com.psj.**.mapper" })
 public class MybatisConfig {
+    @Bean
+    @ConditionalOnProperty(name = {"sql.beauty.show"},havingValue = "true" ,matchIfMissing = true)
+    public SqlBeautyInterceptor sqlBeautyInterceptor() {
+        return new SqlBeautyInterceptor();
+    }
 
 }

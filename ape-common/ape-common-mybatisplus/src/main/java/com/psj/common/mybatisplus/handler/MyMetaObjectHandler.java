@@ -1,7 +1,6 @@
 package com.psj.common.mybatisplus.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
-import lombok.Data;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 
