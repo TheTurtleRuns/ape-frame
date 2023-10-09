@@ -1,5 +1,7 @@
 package com.psj.user.controller;
 
+import com.psj.exception.BaseException;
+import com.psj.result.Resp;
 import com.psj.user.entity.dto.UserDto;
 import com.psj.user.entity.req.UserReq;
 import com.psj.user.service.UserService;
@@ -17,13 +19,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
-@Autowired
-private UserService userService;
-@PostMapping("addUser")
-    public int  addUser(UserReq req){
-    UserDto userDto = new UserDto();
-    BeanUtils.copyProperties(req,userDto);
-    return userService.addUser(userDto);
+    @Autowired
+    private UserService userService;
+
+    @PostMapping("addUser")
+    public Resp addUser(UserReq req) {
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(req, userDto);
+        int i = userService.addUser(userDto);
+        try {
+            i=1/0;
+        }catch (Exception e){
+            throw  new BaseException( "用户模块",  10011,  "失败");
+        }
+
+        return Resp.succcess(i);
 
     }
 }

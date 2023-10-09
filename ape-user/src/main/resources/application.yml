@@ -22,4 +22,4 @@ spring:
           slow-sql-millis: 2000
 sql:
   beauty:
-    show: false
+    show: true
