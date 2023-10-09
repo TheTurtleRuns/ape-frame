@@ -1,5 +1,8 @@
 package com.psj.user.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.psj.common.mybatisplus.entity.PageResult;
 import com.psj.user.entity.dto.UserDto;
 import com.psj.user.entity.po.UserPo;
 import com.psj.user.mapper.UserMapper;
@@ -9,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.annotation.Resource;
+
 /**
  * @author pengshj
  * @version 1.0
@@ -17,8 +22,9 @@ import org.springframework.web.bind.annotation.RequestBody;
  */
 @Service
 public class UserServiceImpl implements UserService {
-    @Autowired
+    @Resource
     private UserMapper userMapper;
+
     @Override
     public int addUser(@RequestBody UserDto userDto) {
         UserPo userPo = new UserPo();
@@ -26,4 +32,19 @@ public class UserServiceImpl implements UserService {
         int count = userMapper.insert(userPo);
         return count;
     }
+
+    @Override
+    public int deleteUser(Integer id) {
+        return userMapper.deleteById(id);
+    }
+
+    @Override
+    public PageResult<UserPo> getUserPage(UserDto userDto) {
+        IPage<UserPo> userPoIPage = new Page<>(userDto.getPageIndex(), userDto.getPageSize());
+        IPage<UserPo> userPage = userMapper.getUserPage(userPoIPage);
+        PageResult<UserPo> pageresult = new PageResult<>();
+        pageresult.loadData(userPage);
+        return pageresult;
+    }
+
 }

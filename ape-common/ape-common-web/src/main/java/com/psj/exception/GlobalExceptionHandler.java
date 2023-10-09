@@ -20,10 +20,45 @@ import java.util.Objects;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     private static final Logger log = LogManager.getLogger(GlobalExceptionHandler.class);
+
+
+    /**
+     * 基础异常
+     *
+     * @return com.psj.result.Resp
+     * @Author Pengshj
+     * @Description
+     * @Date 2023/10/9 9:52
+     * @Param [e]
+     **/
     @ExceptionHandler(BaseException.class)
     public Resp baseException(BaseException e) {
         return Resp.error(e.getMessage());
     }
+
+    /**
+     * 运行时异常
+     *
+     * @return com.psj.result.Resp
+     * @Author Pengshj
+     * @Description
+     * @Date 2023/10/9 9:52
+     * @Param [e]
+     **/
+    @ExceptionHandler(RuntimeException.class)
+    public Resp baseException(RuntimeException e) {
+        return Resp.error(e.getMessage());
+    }
+
+    /**
+     * 业务异常
+     *
+     * @return com.psj.result.Resp
+     * @Author Pengshj
+     * @Description
+     * @Date 2023/10/9 9:52
+     * @Param [e]
+     **/
     @ExceptionHandler(CustomException.class)
     public Resp businessException(CustomException e) {
         if (e.getCode() == null) {
@@ -33,6 +68,15 @@ public class GlobalExceptionHandler {
 
     }
 
+    /**
+     * 参数校验异常
+     *
+     * @return com.psj.result.Resp
+     * @Author Pengshj
+     * @Description
+     * @Date 2023/10/9 9:53
+     * @Param [e]
+     **/
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Resp methodArgumentNotValidException(MethodArgumentNotValidException e) {
 
@@ -44,7 +88,6 @@ public class GlobalExceptionHandler {
             } else {
                 sb.append(", ").append(error.getDefaultMessage());
             }
-
         }
         return Resp.other(400, sb.toString());
 

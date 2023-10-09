@@ -1,6 +1,7 @@
 package com.psj.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.psj.user.entity.po.UserPo;
 
 /**
@@ -10,4 +11,5 @@ import com.psj.user.entity.po.UserPo;
  * @description TODO
  */
 public interface UserMapper extends BaseMapper<UserPo> {
+    IPage<UserPo>  getUserPage(IPage<UserPo> userPoIPage);
 }

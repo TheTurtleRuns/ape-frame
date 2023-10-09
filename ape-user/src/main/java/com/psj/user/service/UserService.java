@@ -1,6 +1,8 @@
 package com.psj.user.service;
 
+import com.psj.common.mybatisplus.entity.PageResult;
 import com.psj.user.entity.dto.UserDto;
+import com.psj.user.entity.po.UserPo;
 
 /**
  * @author pengshj
@@ -10,4 +12,8 @@ import com.psj.user.entity.dto.UserDto;
  */
 public interface UserService {
     int addUser(UserDto userDto);
+
+    int deleteUser(Integer id);
+
+    PageResult<UserPo> getUserPage(UserDto userDto);
 }
