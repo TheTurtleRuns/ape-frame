@@ -1,4 +1,4 @@
-package com.psj.result;
+package com.psj.web.result;
 
 /**
  * @author pengshj
@@ -12,5 +12,9 @@ public class ResultCode {
     public static final Integer ERROR = 500;
 
     public static final Integer PARAMNOTEXIST = 1000;
+    /**
+     * 参数校验
+     */
+    public static final Integer PARAMETERVERIFICATION  = 403001;
 
 }

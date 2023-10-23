@@ -1,6 +1,6 @@
 package com.psj.user.mapper;
 
-import com.psj.user.entity.po.SysUser;
+import com.psj.user.entity.po.SysUserPo;
 
 /**
  * @author pengshj
@@ -23,7 +23,7 @@ public interface SysUserMapper {
      * @param record the record
      * @return insert count
      */
-    int insert(SysUser record);
+    int insert(SysUserPo record);
 
     /**
      * insert record to table selective
@@ -31,7 +31,7 @@ public interface SysUserMapper {
      * @param record the record
      * @return insert count
      */
-    int insertSelective(SysUser record);
+    int insertSelective(SysUserPo record);
 
     /**
      * select by primary key
@@ -39,7 +39,7 @@ public interface SysUserMapper {
      * @param id primary key
      * @return object by primary key
      */
-    SysUser selectByPrimaryKey(Long id);
+    SysUserPo selectByPrimaryKey(Long id);
 
     /**
      * update record selective
@@ -47,7 +47,7 @@ public interface SysUserMapper {
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKeySelective(SysUser record);
+    int updateByPrimaryKeySelective(SysUserPo record);
 
     /**
      * update record
@@ -55,5 +55,5 @@ public interface SysUserMapper {
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKey(SysUser record);
+    int updateByPrimaryKey(SysUserPo record);
 }

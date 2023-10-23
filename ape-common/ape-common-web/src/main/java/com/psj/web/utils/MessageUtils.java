@@ -1,4 +1,4 @@
-package com.psj.utils;
+package com.psj.web.utils;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;

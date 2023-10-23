@@ -1,4 +1,4 @@
-package com.psj.result;
+package com.psj.web.result;
 
 /**
  * @author pengshj

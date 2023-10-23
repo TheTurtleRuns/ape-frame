@@ -1,8 +1,10 @@
-package com.psj.exception;
+package com.psj.web.exception;
 
-import com.psj.result.Resp;
+import com.psj.web.result.Resp;
+import com.psj.web.result.ResultCode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.validation.BindException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -37,20 +39,6 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * 运行时异常
-     *
-     * @return com.psj.result.Resp
-     * @Author Pengshj
-     * @Description
-     * @Date 2023/10/9 9:52
-     * @Param [e]
-     **/
-    @ExceptionHandler(RuntimeException.class)
-    public Resp baseException(RuntimeException e) {
-        return Resp.error(e.getMessage());
-    }
-
-    /**
      * 业务异常
      *
      * @return com.psj.result.Resp
@@ -69,7 +57,7 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * 参数校验异常
+     * 自定义验证异常
      *
      * @return com.psj.result.Resp
      * @Author Pengshj
@@ -77,9 +65,9 @@ public class GlobalExceptionHandler {
      * @Date 2023/10/9 9:53
      * @Param [e]
      **/
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Resp methodArgumentNotValidException(MethodArgumentNotValidException e) {
-
         StringBuffer sb = null;
         List<ObjectError> allErrors = e.getBindingResult().getAllErrors();
         for (ObjectError error : allErrors) {
@@ -89,7 +77,33 @@ public class GlobalExceptionHandler {
                 sb.append(", ").append(error.getDefaultMessage());
             }
         }
-        return Resp.other(400, sb.toString());
+        return Resp.other(ResultCode.PARAMETERVERIFICATION, sb.toString());
+
+
+    }
+
+    /**
+     * 自定义验证异常
+     *
+     * @return com.psj.result.Resp
+     * @Author Pengshj
+     * @Description
+     * @Date 2023/10/10 14:50
+     * @Param [e]
+     **/
+
+    @ExceptionHandler(BindException.class)
+    public Resp bindException(BindException e) {
+        StringBuffer sb = null;
+        List<ObjectError> allErrors = e.getBindingResult().getAllErrors();
+        for (ObjectError error : allErrors) {
+            if (Objects.isNull(sb)) {
+                sb = new StringBuffer(error.getDefaultMessage());
+            } else {
+                sb.append(", ").append(error.getDefaultMessage());
+            }
+        }
+        return Resp.other(ResultCode.PARAMETERVERIFICATION, sb.toString());
 
 
     }

@@ -10,7 +10,7 @@ import lombok.Data;
  * @description TODO
  */
 @Data
-public class SysUser {
+public class SysUserPo {
     private Long id;
 
     private String userName;

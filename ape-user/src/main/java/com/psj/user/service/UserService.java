@@ -11,6 +11,7 @@ import com.psj.user.entity.po.UserPo;
  * @description TODO
  */
 public interface UserService {
+
     int addUser(UserDto userDto);
 
     int deleteUser(Integer id);

@@ -1,4 +1,4 @@
-package com.psj.exception;
+package com.psj.web.exception;
 
 /**
  * @ClassName CustomException

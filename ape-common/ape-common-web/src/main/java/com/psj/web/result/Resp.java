@@ -1,5 +1,6 @@
-package com.psj.result;
+package com.psj.web.result;
 
+import com.psj.web.exception.AppExceptionCodeMsg;
 import lombok.Data;
 
 /**
@@ -15,12 +16,14 @@ public class Resp<T> {
     private String msg;
     private Boolean success;
     private T data;
+
     private Resp(Integer code, String msg, T data, Boolean success) {
         this.code = code;
         this.msg = msg;
         this.data = data;
         this.success = success;
     }
+
     private Resp() {
     }
 
@@ -54,7 +57,11 @@ public class Resp<T> {
         return other(resultCode, resultMessage, null);
     }
 
-    public static Resp other( String resultMessage) {
+    public static Resp other(AppExceptionCodeMsg appExceptionCodeMsg) {
+        return other(appExceptionCodeMsg.getCode(), appExceptionCodeMsg.getMsg(), null);
+    }
+
+    public static Resp other(String resultMessage) {
         return other(null, resultMessage, null);
     }
 

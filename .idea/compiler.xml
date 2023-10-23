@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ape-user" />
         <module name="ape-common-mybatisplus" />
+        <module name="ape-common-redis" />
+        <module name="ape-user" />
         <module name="ape-common-web" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ape-common" options="" />
       <module name="ape-common-mybatisplus" options="-parameters" />
+      <module name="ape-common-redis" options="-parameters" />
       <module name="ape-common-web" options="-parameters" />
       <module name="ape-frame" options="" />
       <module name="ape-user" options="-parameters" />

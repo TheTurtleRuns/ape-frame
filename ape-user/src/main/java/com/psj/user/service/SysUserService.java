@@ -1,6 +1,6 @@
 package com.psj.user.service;
 
-import com.psj.user.entity.po.SysUser;
+import com.psj.user.entity.po.SysUserPo;
 
 /**
  * @author pengshj
@@ -13,15 +13,15 @@ public interface SysUserService {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(SysUser record);
+    int insert(SysUserPo record);
 
-    int insertSelective(SysUser record);
+    int insertSelective(SysUserPo record);
 
-    SysUser selectByPrimaryKey(Long id);
+    SysUserPo selectByPrimaryKey(Long id);
 
-    int updateByPrimaryKeySelective(SysUser record);
+    int updateByPrimaryKeySelective(SysUserPo record);
 
-    int updateByPrimaryKey(SysUser record);
+    int updateByPrimaryKey(SysUserPo record);
 
 }
 

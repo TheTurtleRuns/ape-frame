@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.psj.user.mapper.SysUserMapper">
-  <resultMap id="BaseResultMap" type="com.psj.user.entity.po.SysUser">
+  <resultMap id="BaseResultMap" type="com.psj.user.entity.po.SysUserPo">
     <!--@mbg.generated-->
     <!--@Table ape_frame.sys_user-->
     <id column="id" jdbcType="BIGINT" property="id" />
@@ -31,7 +31,7 @@
     delete from ape_frame.sys_user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.psj.user.entity.po.SysUser" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.psj.user.entity.po.SysUserPo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into ape_frame.sys_user (user_name, age, create_by, 
       create_time, update_by, update_time, 
@@ -40,7 +40,7 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{deleteFlag,jdbcType=TINYINT}, #{version,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.psj.user.entity.po.SysUser" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.psj.user.entity.po.SysUserPo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into ape_frame.sys_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -96,7 +96,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.psj.user.entity.po.SysUser">
+  <update id="updateByPrimaryKeySelective" parameterType="com.psj.user.entity.po.SysUserPo">
     <!--@mbg.generated-->
     update ape_frame.sys_user
     <set>
@@ -127,7 +127,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.psj.user.entity.po.SysUser">
+  <update id="updateByPrimaryKey" parameterType="com.psj.user.entity.po.SysUserPo">
     <!--@mbg.generated-->
     update ape_frame.sys_user
     set user_name = #{userName,jdbcType=VARCHAR},

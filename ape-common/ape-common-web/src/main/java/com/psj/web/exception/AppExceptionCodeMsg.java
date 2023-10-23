@@ -1,4 +1,4 @@
-package com.psj.exception;
+package com.psj.web.exception;
 
 /**
  * @ClassName AppExceptionCodeMsg
@@ -8,7 +8,7 @@ package com.psj.exception;
  **/
 public enum AppExceptionCodeMsg {
     //用户相关业务异常
-    USERNAME_NOT_EXISTS(10001, "用户名不存在"),
+    USERNAME_NOT_EXISTS(10001, "用户不存在"),
     INVALID_CODE(10000, "验证码无效"),
     USER_CREDIT_NOT_ENOUTH(10002, "用户积分不足");
     //代码

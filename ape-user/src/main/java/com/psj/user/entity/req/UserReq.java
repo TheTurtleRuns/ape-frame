@@ -4,6 +4,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -20,9 +22,11 @@ public class UserReq {
     @ApiModelProperty(value = "年龄")
     private Integer age;
     @ApiModelProperty(value = "每页大小", required = true)
-    @NotNull(message = "pageSize 不能为空")
+    @Max(value = 500, message = "pageSize不能超过500")
+    @NotNull(message = "pageSize不能为空")
     private Integer pageSize;
     @ApiModelProperty(value = "当前页", required = true)
+    @Min(value = 1, message = "pageIndex不能小于1")
     @NotNull(message = "pageIndex 不能为空")
     private Integer pageIndex;
 }

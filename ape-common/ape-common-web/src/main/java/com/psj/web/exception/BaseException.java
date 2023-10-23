@@ -1,8 +1,6 @@
-package com.psj.exception;
+package com.psj.web.exception;
 
-import com.psj.utils.MessageUtils;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
+import com.psj.web.utils.MessageUtils;
 import org.springframework.util.StringUtils;
 
 /**
