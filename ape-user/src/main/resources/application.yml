@@ -6,7 +6,7 @@ spring:
     url: jdbc:mysql://1.117.180.137:3306/ape_frame?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      initial-size: 50
+      initial-size: 20
       min-idle: 20
       max-active: 200
       max-wait: 60000
@@ -20,6 +20,19 @@ spring:
           enabled: true
           log-slow-sql: true
           slow-sql-millis: 2000
+  redis:
+    host: r-bp1jl3qlgytl4d9q8ypd.redis.rds.aliyuncs.com
+    port: 6379
+    username: redis_root
+    password: Redis123
+    database: 0
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+
 sql:
   beauty:
     show: true
@@ -35,6 +48,6 @@ swagger:
   description: 一个脚手架
   contactEmail: 1503667055@163.com
   contactName: pengshj
-  contactUrl: 123
+  contactUrl: 1
   version: 1.0
   group-name: 用户模块

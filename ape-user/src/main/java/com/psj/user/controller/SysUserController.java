@@ -1,11 +1,15 @@
 package com.psj.user.controller;
 
+import com.psj.redis.utils.RedisShareLockUtil;
+import com.psj.redis.utils.RedisUtil;
 import com.psj.web.exception.AppExceptionCodeMsg;
 import com.psj.web.result.Resp;
 import com.psj.user.entity.po.SysUserPo;
 import com.psj.user.service.SysUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -24,6 +28,12 @@ public class SysUserController {
     @Resource
     private SysUserService sysUserService;
 
+    @Resource
+
+    private RedisUtil redisUtil;
+    @Resource
+    private RedisShareLockUtil redisShareLockUtil;
+
     /**
      * 通过主键查询单条数据
      *
@@ -34,6 +44,8 @@ public class SysUserController {
     @ApiOperation(value = "根据用户id查询用户", notes = "根据用户id查询用户信息")
     public Resp selectOne(@PathVariable Long id) {
         SysUserPo sysUser = sysUserService.selectByPrimaryKey(id);
+        redisUtil.set("name","麻辣王子 ");
+        redisShareLockUtil.lock("keyy", "dashijie", 100000L);
         if (sysUser == null) {
             return Resp.other(AppExceptionCodeMsg.USERNAME_NOT_EXISTS);
         }
