@@ -3,6 +3,7 @@ package com.psj.user.service.impl;
 import com.psj.user.entity.po.SysUserPo;
 import com.psj.user.mapper.SysUserMapper;
 import com.psj.user.service.SysUserService;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -35,6 +36,7 @@ public class SysUserServiceImpl implements SysUserService {
     }
 
     @Override
+    @Cacheable(cacheNames = "sysUser",key ="'byId'+#id")
     public SysUserPo selectByPrimaryKey(Long id) {
         return sysUserMapper.selectByPrimaryKey(id);
     }

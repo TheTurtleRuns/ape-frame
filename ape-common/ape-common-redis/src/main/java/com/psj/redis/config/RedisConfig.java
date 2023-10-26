@@ -6,11 +6,17 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.cache.RedisCacheWriter;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+
+import java.time.Duration;
 
 /**
  * @author pengshj
@@ -33,7 +39,15 @@ public class RedisConfig {
 
     }
 
-
+    /**
+     * 序列化设置
+     *
+     * @return org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer
+     * @Author Pengshj
+     * @Description
+     * @Date 2023/10/26 15:57
+     * @Param []
+     **/
     private Jackson2JsonRedisSerializer jackson2JsonRedisSerializer() {
         // jackson序列化所有的类
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
@@ -44,4 +58,21 @@ public class RedisConfig {
         return jackson2JsonRedisSerializer;
     }
 
+    /**
+     * 缓存设置
+     *
+     * @return org.springframework.data.redis.cache.RedisCacheManager
+     * @Author Pengshj
+     * @Description
+     * @Date 2023/10/26 15:56
+     * @Param [connectionFactory]
+     **/
+    @Bean
+    public RedisCacheManager redisCacheManager(RedisConnectionFactory connectionFactory) {
+        RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(connectionFactory);
+        RedisSerializationContext.SerializationPair pair = RedisSerializationContext.SerializationPair.fromSerializer(jackson2JsonRedisSerializer());
+        RedisCacheConfiguration defaultCacheConfig = RedisCacheConfiguration.defaultCacheConfig()
+                .serializeValuesWith(pair).entryTtl(Duration.ofSeconds(10));
+        return new RedisCacheManager(redisCacheWriter, defaultCacheConfig);
+    }
 }

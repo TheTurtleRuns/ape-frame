@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ape-common-mybatisplus" />
         <module name="ape-common-redis" />
+        <module name="jwzh" />
         <module name="ape-user" />
         <module name="ape-common-web" />
       </profile>
@@ -22,6 +23,7 @@
       <module name="ape-common-web" options="-parameters" />
       <module name="ape-frame" options="" />
       <module name="ape-user" options="-parameters" />
+      <module name="jwzh" options="-parameters" />
     </option>
   </component>
 </project>

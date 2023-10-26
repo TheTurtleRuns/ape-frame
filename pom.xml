@@ -9,6 +9,7 @@
     <modules>
         <module>ape-common</module>
         <module>ape-user</module>
+        <module>jwzh</module>
     </modules>
 
     <repositories>

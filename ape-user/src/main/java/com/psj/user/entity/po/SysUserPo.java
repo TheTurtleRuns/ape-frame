@@ -1,5 +1,6 @@
 package com.psj.user.entity.po;
 
+import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
 
@@ -10,7 +11,7 @@ import lombok.Data;
  * @description TODO
  */
 @Data
-public class SysUserPo {
+public class SysUserPo implements Serializable {
     private Long id;
 
     private String userName;

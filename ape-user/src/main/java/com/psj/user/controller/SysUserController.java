@@ -44,8 +44,7 @@ public class SysUserController {
     @ApiOperation(value = "根据用户id查询用户", notes = "根据用户id查询用户信息")
     public Resp selectOne(@PathVariable Long id) {
         SysUserPo sysUser = sysUserService.selectByPrimaryKey(id);
-        redisUtil.set("name","麻辣王子 ");
-        redisShareLockUtil.lock("keyy", "dashijie", 100000L);
+
         if (sysUser == null) {
             return Resp.other(AppExceptionCodeMsg.USERNAME_NOT_EXISTS);
         }
