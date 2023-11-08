@@ -2,15 +2,17 @@ package com.psj.user.controller;
 
 import com.psj.redis.utils.RedisShareLockUtil;
 import com.psj.redis.utils.RedisUtil;
-import com.psj.web.exception.AppExceptionCodeMsg;
-import com.psj.web.result.Resp;
 import com.psj.user.entity.po.SysUserPo;
 import com.psj.user.service.SysUserService;
+import com.psj.web.exception.AppExceptionCodeMsg;
+import com.psj.web.result.Resp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.web.bind.annotation.*;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
@@ -20,6 +22,7 @@ import javax.annotation.Resource;
  * @Description
  * @Date 2023/10/9 16:03
  **/
+@Slf4j
 @RestController
 @RequestMapping("/sysuser")
 @Api(tags = "系统用户表")
@@ -44,7 +47,9 @@ public class SysUserController {
     @ApiOperation(value = "根据用户id查询用户", notes = "根据用户id查询用户信息")
     public Resp selectOne(@PathVariable Long id) {
         SysUserPo sysUser = sysUserService.selectByPrimaryKey(id);
-
+        for (int i = 0; i < 100000; i++) {
+            log.info("这是第"+i+"次输出");
+        }
         if (sysUser == null) {
             return Resp.other(AppExceptionCodeMsg.USERNAME_NOT_EXISTS);
         }

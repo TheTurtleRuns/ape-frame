@@ -13,7 +13,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 
 /**
  * @author pengshj
@@ -71,7 +70,7 @@ public class UserController {
      **/
     @GetMapping("/getUserPage")
     @ApiOperation(value = "获取用户表列表", notes = "分页获取用户表列表")
-    public Resp getUserPage(@Valid UserReq userReq) {
+    public Resp getUserPage( UserReq userReq) {
         UserDto userDto = UserConverter.INSTANCE.converReqToUserDto(userReq);
         PageResult<UserPo> userPage = userService.getUserPage(userDto);
         return Resp.succcess(userPage);

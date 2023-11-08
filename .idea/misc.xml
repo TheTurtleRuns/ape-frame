@@ -10,6 +10,8 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/ape-common-mybatisplus/pom.xml" />
+        <option value="$PROJECT_DIR$/ape-dependencies/pom.xml" />
+        <option value="$PROJECT_DIR$/jwzh/pom.xml" />
       </set>
     </option>
   </component>

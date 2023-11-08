@@ -1,4 +1,5 @@
 spring:
+  port: 8081
   datasource:
     username: wzz
     password: wzz0504
@@ -51,3 +52,5 @@ swagger:
   contactUrl: 1
   version: 1.0
   group-name: 用户模块
+logging:
+  config: classpath:log4j-spring.xml

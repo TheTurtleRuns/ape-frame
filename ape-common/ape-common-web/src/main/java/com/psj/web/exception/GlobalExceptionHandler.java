@@ -2,8 +2,6 @@ package com.psj.web.exception;
 
 import com.psj.web.result.Resp;
 import com.psj.web.result.ResultCode;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.validation.BindException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -21,7 +19,6 @@ import java.util.Objects;
  **/
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-    private static final Logger log = LogManager.getLogger(GlobalExceptionHandler.class);
 
 
     /**
