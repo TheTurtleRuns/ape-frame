@@ -54,3 +54,6 @@ swagger:
   group-name: 用户模块
 logging:
   config: classpath:log4j-spring.xml
+log:
+  aspect:
+    enable: true
