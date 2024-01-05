@@ -136,6 +136,7 @@
 
         <AsyncRoot level="info" includeLocation="true">
             <AppenderRef ref="RollingFileInfo"/>
+            <AppenderRef ref="Console"/>
         </AsyncRoot>
 
        <!-- <root level="info">

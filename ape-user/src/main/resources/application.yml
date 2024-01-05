@@ -1,5 +1,5 @@
 spring:
-  port: 8081
+  port: 8080
   datasource:
     username: wzz
     password: wzz0504
@@ -22,16 +22,15 @@ spring:
           log-slow-sql: true
           slow-sql-millis: 2000
   redis:
-    host: r-bp1jl3qlgytl4d9q8ypd.redis.rds.aliyuncs.com
+    host: 1.117.180.137
     port: 6379
-    username: redis_root
     password: Redis123
     database: 0
     lettuce:
       pool:
         max-active: 20
-        max-idle: 8
         max-wait: -1
+        max-idle: 8
         min-idle: 0
 
 sql:

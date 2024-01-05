@@ -12,6 +12,7 @@
         <module name="ape-user" />
         <module name="ape-common-web" />
         <module name="ape-common-log" />
+        <module name="ape-common-tool" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,6 +26,7 @@
       <module name="ape-common-log" options="-parameters" />
       <module name="ape-common-mybatisplus" options="-parameters" />
       <module name="ape-common-redis" options="-parameters" />
+      <module name="ape-common-tool" options="-parameters" />
       <module name="ape-common-web" options="-parameters" />
       <module name="ape-dependencies" options="" />
       <module name="ape-frame" options="" />

@@ -28,7 +28,11 @@ public class Resp<T> {
     }
 
     public static Resp succcess() {
-        return succcess(null);
+        Resp result = new Resp();
+        result.setSuccess(true);
+        result.setCode(ResultCode.SUCCESS);
+        result.setMsg(ResultMessage.SUCCESS);
+        return result;
     }
 
     public static <T> Resp succcess(T data) {
@@ -41,7 +45,11 @@ public class Resp<T> {
     }
 
     public static Resp error() {
-        return error(null);
+        Resp result = new Resp();
+        result.setSuccess(true);
+        result.setCode(ResultCode.ERROR);
+        result.setMsg(ResultMessage.ERROR);
+        return result;
     }
 
     public static <T> Resp error(T data) {

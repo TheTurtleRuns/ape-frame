@@ -21,7 +21,6 @@ import org.springframework.stereotype.Component;
 @Component
 @ConditionalOnProperty(name = {"log.aspect.enable"}, havingValue = "true", matchIfMissing = true)
 public class LogAspect {
-
     @Pointcut("execution(* com.psj.*.controller.*Controller.*(..)) || execution(* com.psj.*.service.*Service.*(..))")
     private void pointCut() {
     }

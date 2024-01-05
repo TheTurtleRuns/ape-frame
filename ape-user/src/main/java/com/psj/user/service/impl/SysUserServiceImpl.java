@@ -1,5 +1,6 @@
 package com.psj.user.service.impl;
 
+import com.psj.user.designpattern.stragetypattern.PayHandlerDemo;
 import com.psj.user.entity.po.SysUserPo;
 import com.psj.user.mapper.SysUserMapper;
 import com.psj.user.service.SysUserService;
@@ -20,6 +21,9 @@ public class SysUserServiceImpl implements SysUserService {
     @Resource
     private SysUserMapper sysUserMapper;
 
+    @Resource
+    private com.psj.user.designpattern.stragetypattern.PayHandlerDemo PayHandlerDemo;
+
     @Override
     public int deleteByPrimaryKey(Long id) {
         return sysUserMapper.deleteByPrimaryKey(id);
@@ -38,6 +42,7 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     @Cacheable(cacheNames = "sysUser",key ="'byId'+#id")
     public SysUserPo selectByPrimaryKey(Long id) {
+        PayHandlerDemo.dealPay(0);
         return sysUserMapper.selectByPrimaryKey(id);
     }
 

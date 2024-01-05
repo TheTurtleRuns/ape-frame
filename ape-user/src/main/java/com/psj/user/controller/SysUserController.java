@@ -47,9 +47,7 @@ public class SysUserController {
     @ApiOperation(value = "根据用户id查询用户", notes = "根据用户id查询用户信息")
     public Resp selectOne(@PathVariable Long id) {
         SysUserPo sysUser = sysUserService.selectByPrimaryKey(id);
-        for (int i = 0; i < 100000; i++) {
-            log.info("这是第"+i+"次输出");
-        }
+
         if (sysUser == null) {
             return Resp.other(AppExceptionCodeMsg.USERNAME_NOT_EXISTS);
         }

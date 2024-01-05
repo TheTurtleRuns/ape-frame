@@ -20,7 +20,7 @@ public class RedisShareLockUtil {
     private Long TIME_OUT = 1000L;
 
     /**
-     * 枷锁
+     * 加锁
      *
      * @return boolean
      * @Author Pengshj
