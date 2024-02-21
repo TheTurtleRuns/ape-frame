@@ -20,7 +20,7 @@ public class ExportWordUtils {
     private static Configuration configuration = null;
 
     static {
-        configuration = new Configuration();
+        configuration = new Configuration(Configuration.VERSION_2_3_23);
         configuration.setDefaultEncoding("UTF-8");
         configuration.setClassForTemplateLoading(ExportWordUtils.class, "/template/word");
     }
