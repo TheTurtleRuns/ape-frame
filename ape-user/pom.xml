@@ -36,6 +36,7 @@
             <artifactId>ape-common-log</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.psj</groupId>
             <artifactId>ape-common-tool</artifactId>
@@ -52,6 +53,16 @@
         <dependency>
             <groupId>com.psj</groupId>
             <artifactId>ape-common-websocket</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.psj</groupId>
+            <artifactId>ape-common-test</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.psj</groupId>
+            <artifactId>ape-common-job</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
