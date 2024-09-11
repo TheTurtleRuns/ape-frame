@@ -1,4 +1,7 @@
 package com.psj.tool;
+
+import cn.hutool.core.date.DateUtil;
+
 import java.security.MessageDigest;
 
 /**
@@ -23,5 +26,11 @@ public class Md5Utils {
             e.printStackTrace();
             return null;
         }
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println(DateUtil.date(Long.parseLong("1716378639")*1000));
     }
 }

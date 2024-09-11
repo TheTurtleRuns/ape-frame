@@ -4,6 +4,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @author pengshj
  * @version 1.0
@@ -16,4 +18,6 @@ public class UserDto {
     private Integer age;
     private Integer pageSize;
     private Integer pageIndex;
+
+       private Date hdsj;
 }

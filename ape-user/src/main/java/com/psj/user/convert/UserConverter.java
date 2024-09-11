@@ -36,11 +36,11 @@ public interface UserConverter {
     UserPo converDtoToUserPo(UserDto userDto);
     /**
      * 将 UserAddReq 装换为 UserDto
-     * @Author Pengshj
+     * @Author Pengshj[userAddReq]
+     *      *
      * @Description
      * @Date 2023/10/17 10:40
-     * @Param [userAddReq]
-     * @return com.psj.user.entity.dto.UserDto
+     * @Param  @return com.psj.user.entity.dto.UserDto
      **/
     UserDto converAddReqToUserDto(UserAddReq userAddReq);
 
