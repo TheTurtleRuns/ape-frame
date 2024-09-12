@@ -1,10 +1,6 @@
 package com.psj.user.entity.dto;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-
-import java.util.Date;
 
 /**
  * @author pengshj
@@ -18,6 +14,4 @@ public class UserDto {
     private Integer age;
     private Integer pageSize;
     private Integer pageIndex;
-
-       private Date hdsj;
 }

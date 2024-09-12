@@ -1,10 +1,16 @@
 package com.psj.redis.utils;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.*;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
+import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -20,6 +26,22 @@ import java.util.concurrent.TimeUnit;
 public class RedisUtil {
     @Autowired
     private  RedisTemplate redisTemplate;
+
+    private static final String CACHE_KEY_SEPARATOR = ".";
+    private DefaultRedisScript<Boolean> casScript;
+    @PostConstruct
+    public void init() {
+        casScript = new DefaultRedisScript<>();
+        casScript.setResultType(Boolean.class);
+        casScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("compareAndSet.lua")));
+        System.out.println(JSON.toJSON(casScript));
+    }
+
+    public Boolean compareAndSet(String key, Long oldValue, Long newValue) {
+        List<String> keys = new ArrayList();
+        keys.add(key);
+        return (Boolean) redisTemplate.execute(casScript, keys, oldValue, newValue);
+    }
     /**
      * 写入缓存
      *

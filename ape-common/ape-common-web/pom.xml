@@ -36,6 +36,11 @@
 
         </dependency>
         <dependency>
+            <groupId>com.psj</groupId>
+            <artifactId>ape-common-tool</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
         </dependency>

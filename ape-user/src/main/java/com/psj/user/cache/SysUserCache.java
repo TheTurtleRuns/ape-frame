@@ -1,17 +1,10 @@
 package com.psj.user.cache;
 
-import cn.hutool.core.date.DateTime;
-import cn.hutool.core.date.DateUtil;
 import com.psj.redis.init.AbstractCache;
 import com.psj.redis.utils.RedisUtil;
-import com.psj.user.entity.dto.UserDto;
-import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * @author pengshj
@@ -21,31 +14,35 @@ import java.util.Date;
  */
 @Component
 public class SysUserCache extends AbstractCache {
+    private static final String SYS_USER_CACHE_KEY = "SYS_USER";
 
     @Autowired
-    private  RedisUtil redisUtil;
+    private RedisUtil redisUtil;
+    @Autowired
+    private RedisTemplate redisTemplate;
+
     @Override
     public void initCache() {
-        redisUtil.set("123","45600");
+        redisUtil.set("123", "45600");
     }
 
     @Override
     public <T> T getCache(String key) {
-        return super.getCache(key);
-    }
 
+        if (!redisTemplate.hasKey(key).booleanValue()) {
+            reloadCache();
+        }
+        return (T) redisTemplate.opsForValue().get(key);
+    }
     @Override
     public void clearCache() {
-        super.clearCache();
+        redisTemplate.delete(SYS_USER_CACHE_KEY);
     }
-
-
     @Override
     public void reloadCache() {
         clearCache();
         initCache();
     }
-
 
 
 }

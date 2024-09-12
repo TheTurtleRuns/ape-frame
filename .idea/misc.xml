@@ -8,14 +8,6 @@
         <option value="$PROJECT_DIR$/ape-dependencies/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/../ape-common/ape-common-log/pom.xml" />
-        <option value="$PROJECT_DIR$/ape-common-log/pom.xml" />
-        <option value="$PROJECT_DIR$/ape-common-mybatisplus/pom.xml" />
-        <option value="$PROJECT_DIR$/jwzh/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
