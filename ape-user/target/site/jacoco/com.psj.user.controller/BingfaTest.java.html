@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BingfaTest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ape-user</a> &gt; <a href="index.source.html" class="el_package">com.psj.user.controller</a> &gt; <span class="el_source">BingfaTest.java</span></div><h1>BingfaTest.java</h1><pre class="source lang-java linenums">package com.psj.user.controller;
+
+import com.psj.user.designpattern.mydisign.handler.UserPermission;
+import com.psj.user.designpattern.mydisign.handler.UserTest;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
+
+/**
+ * @author pengshj
+ * @version 1.0
+ * @date 2025/3/12-15:40
+ * @description TODO
+ */
+<span class="nc" id="L18">public class BingfaTest {</span>
+    private static final int WORKER_COUNT = 3;
+<span class="nc" id="L20">    private static int countIndex = 0;</span>
+<span class="nc" id="L21">    private static final ReentrantLock LOCK = new ReentrantLock();</span>
+
+    public static void main(String[] args){
+<span class="nc" id="L24">        UserTest  userTest =new UserTest();</span>
+<span class="nc" id="L25">        userTest.setUserPermission(UserPermission.BASIC);</span>
+<span class="nc" id="L26">           System.out.println(userTest.getUserPermission());</span>
+<span class="nc" id="L27">           System.out.println(UserPermission.BASIC.name());</span>
+
+
+
+
+
+      /*  final List&lt;Condition&gt; conditions = new ArrayList&lt;&gt;();
+        for(int i=0; i&lt; WORKER_COUNT; i++){
+            // 为每一个线程分配一个condition
+            Condition condition = LOCK.newCondition();
+            conditions.add(condition);
+            Worker worker = new Worker(i, conditions);
+            worker.start();
+        }
+*/
+<span class="nc" id="L42">    }</span>
+
+    static class Worker extends Thread{
+
+        int index;
+        List&lt;Condition&gt; conditions;
+
+        public Worker(int index, List&lt;Condition&gt; conditions){
+<span class="nc" id="L50">            super(&quot;Thread-&quot;+index);</span>
+<span class="nc" id="L51">            this.index = index;</span>
+<span class="nc" id="L52">            this.conditions = conditions;</span>
+<span class="nc" id="L53">        }</span>
+
+        private void signalNext(){
+<span class="nc" id="L56">            int nextIndex = (index + 1) % conditions.size();</span>
+<span class="nc" id="L57">            conditions.get(nextIndex).signal();</span>
+<span class="nc" id="L58">        }</span>
+
+        @Override
+        public void run(){
+            while(true) {
+                //锁住 保证操作间同时只有一个线程
+<span class="nc" id="L64">                LOCK.lock();</span>
+                try {
+                    // 如果当前线程不满足打印条件，则等待
+<span class="nc bnc" id="L67" title="All 2 branches missed.">                    if (countIndex % 3 != index) {</span>
+<span class="nc" id="L68">                        conditions.get(index).await();</span>
+                    }
+<span class="nc bnc" id="L70" title="All 2 branches missed.">                    if (countIndex &gt; 100) {</span>
+                        // 唤醒下一个线程，保证程序正常退出
+<span class="nc" id="L72">                        signalNext();</span>
+                        // 退出循环 线程运行结束
+<span class="nc" id="L74">                        return;</span>
+                    }
+                   // System.out.println((this.getName() + &quot; &quot; + countIndex));
+<span class="nc" id="L77">                  char ch=  (char)(65+countIndex%3);</span>
+<span class="nc" id="L78">                    System.out.println((this.getName() + &quot; &quot;+ch));</span>
+                    // 计数器+1
+<span class="nc" id="L80">                    countIndex ++;</span>
+                    // 通知下一个干活
+<span class="nc" id="L82">                    signalNext();</span>
+<span class="nc" id="L83">                }catch (Exception e){</span>
+<span class="nc" id="L84">                    e.printStackTrace();</span>
+                }finally {
+<span class="nc" id="L86">                    LOCK.unlock();</span>
+<span class="nc" id="L87">                }</span>
+            }
+        }
+    }
+   /* private static final Object LOCK = new Object();
+    private static volatile int count = 0;
+    private static final int MAX = 100;
+
+    public static void main(String[] args) {
+        for (int i = 0; i &lt; 4; i++) {
+            new Thread(new Seq(i)).start();
+        }
+
+    }
+
+    static class Seq implements Runnable {
+
+        private final int index;
+
+        public Seq(int index) {
+            this.index = index;
+        }
+
+        @Override
+        public void run() {
+            while (count &lt; MAX) {
+                synchronized (LOCK) {
+                    try {
+                        while (count % 4 != index) {
+                            LOCK.wait();
+                        }
+                        if(count &lt;=MAX){
+                            System.out.println(&quot;Thread-&quot; + index + &quot;: &quot; + count);
+                        }
+                        count++;
+                        LOCK.notifyAll();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }*/
+    }
+
+
+
+
+
+
+
+   /* volatile int number = 0;
+    AtomicInteger atomicInteger=new AtomicInteger(0);
+    public void increase() {
+        atomicInteger.getAndAdd(1);
+    }
+
+    public static void main(String[] args) {
+        BingfaTest volatileAtomDemo = new BingfaTest();
+        for (int j = 0; j &lt; 10; j++) {
+            new Thread(() -&gt; {
+                for (int i = 0; i &lt; 1000; i++) {
+                    volatileAtomDemo.increase();
+                }
+            }, String.valueOf(j)).start();
+        }
+        while (Thread.activeCount() &gt; 2) {
+            Thread.yield();
+        }
+
+        System.out.println(Thread.currentThread().getName() +
+                &quot; final number result = &quot; + volatileAtomDemo.atomicInteger);
+    }*/
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

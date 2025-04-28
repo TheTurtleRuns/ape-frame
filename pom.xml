@@ -10,6 +10,8 @@
         <module>ape-common</module>
         <module>ape-user</module>
         <module>ape-dependencies</module>
+        <module>ape-demo</module>
+        <module>ape-aimodel</module>
 
     </modules>
 </project>

@@ -6,7 +6,7 @@ package com.psj.user.designpattern.mydisign;
  * @date 2025/3/7-9:19
  * @description TODO
  */
-public class PayChannelEnum {
+public enum MyPayChannelEnum {
 
     ZFB_PAY(0, "支付宝支付"),
     WX_PAY(1, "微信支付"),
@@ -16,18 +16,19 @@ public class PayChannelEnum {
 
     private String desc;
 
-    PayChannelEnum(int code, String desc) {
+    MyPayChannelEnum(int code, String desc) {
         this.code = code;
         this.desc = desc;
     }
 
     /**
      * 根据code值获取渠道枚举
+     * @return
      */
-    public static com.psj.user.designpattern.stragetypattern.PayChannelEnum getByCode(int codeVal) {
-        for (com.psj.user.designpattern.stragetypattern.PayChannelEnum payChannelEnum : com.psj.user.designpattern.stragetypattern.PayChannelEnum.values()) {
-            if (payChannelEnum.code == codeVal) {
-                return payChannelEnum;
+    public static MyPayChannelEnum getByCode(int codeVal) {
+        for (MyPayChannelEnum myPayChannelEnum : MyPayChannelEnum.values()) {
+            if (myPayChannelEnum.code == codeVal) {
+                return myPayChannelEnum;
             }
         }
         return null;

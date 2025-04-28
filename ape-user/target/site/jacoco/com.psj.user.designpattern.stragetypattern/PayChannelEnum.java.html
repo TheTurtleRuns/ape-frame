@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PayChannelEnum.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ape-user</a> &gt; <a href="index.source.html" class="el_package">com.psj.user.designpattern.stragetypattern</a> &gt; <span class="el_source">PayChannelEnum.java</span></div><h1>PayChannelEnum.java</h1><pre class="source lang-java linenums">package com.psj.user.designpattern.stragetypattern;
+
+<span class="fc" id="L3">public enum PayChannelEnum {</span>
+
+<span class="fc" id="L5">    ZFB_PAY(0, &quot;支付宝支付&quot;),</span>
+<span class="fc" id="L6">    WX_PAY(1, &quot;微信支付&quot;),</span>
+<span class="fc" id="L7">    BANK_PAY(2, &quot;银行卡支付&quot;);</span>
+
+    private int code;
+
+    private String desc;
+
+<span class="fc" id="L13">    PayChannelEnum(int code, String desc) {</span>
+<span class="fc" id="L14">        this.code = code;</span>
+<span class="fc" id="L15">        this.desc = desc;</span>
+<span class="fc" id="L16">    }</span>
+
+    /**
+     * 根据code值获取渠道枚举
+     */
+    public static PayChannelEnum getByCode(int codeVal) {
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">        for (PayChannelEnum payChannelEnum : PayChannelEnum.values()) {</span>
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">            if (payChannelEnum.code == codeVal) {</span>
+<span class="fc" id="L24">                return payChannelEnum;</span>
+            }
+        }
+<span class="nc" id="L27">        return null;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

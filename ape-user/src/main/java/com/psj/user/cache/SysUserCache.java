@@ -1,10 +1,18 @@
 package com.psj.user.cache;
 
+import cn.hutool.core.date.DateField;
+import cn.hutool.core.date.DateRange;
+import cn.hutool.core.date.DateTime;
+import cn.hutool.core.date.DateUtil;
 import com.psj.redis.init.AbstractCache;
 import com.psj.redis.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
+
+import java.awt.*;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author pengshj
@@ -43,6 +51,7 @@ public class SysUserCache extends AbstractCache {
         clearCache();
         initCache();
     }
+
 
 
 }

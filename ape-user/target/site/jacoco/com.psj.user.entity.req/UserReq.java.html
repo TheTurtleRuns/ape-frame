@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserReq.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ape-user</a> &gt; <a href="index.source.html" class="el_package">com.psj.user.entity.req</a> &gt; <span class="el_source">UserReq.java</span></div><h1>UserReq.java</h1><pre class="source lang-java linenums">package com.psj.user.entity.req;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+/**
+ * @author pengshj
+ * @version 1.0
+ * @date 2023/10/8-10:41
+ * @description TODO
+ */
+<span class="nc bnc" id="L17" title="All 38 branches missed.">@Data</span>
+@ApiModel(&quot;用户查询&quot;)
+public class UserReq {
+    @ApiModelProperty(value = &quot;姓名&quot;)
+<span class="nc" id="L21">    private String name;</span>
+    @ApiModelProperty(value = &quot;年龄&quot;)
+<span class="nc" id="L23">    private Integer age;</span>
+    @ApiModelProperty(value = &quot;每页大小&quot;, required = true)
+    @Max(value = 500, message = &quot;pageSize不能超过500&quot;)
+    @NotNull(message = &quot;pageSize不能为空&quot;)
+<span class="nc" id="L27">    private Integer pageSize;</span>
+    @ApiModelProperty(value = &quot;当前页&quot;, required = true)
+    @Min(value = 1, message = &quot;pageIndex不能小于1&quot;)
+    @NotNull(message = &quot;pageIndex 不能为空&quot;)
+<span class="nc" id="L31">    private Integer pageIndex;</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

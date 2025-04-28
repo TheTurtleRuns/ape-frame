@@ -1,6 +1,10 @@
 package com.psj.user.controller;
 
+import cn.hutool.core.date.DateField;
+import cn.hutool.core.date.DateTime;
+import cn.hutool.core.date.DateUtil;
 import com.psj.common.mybatisplus.entity.PageResult;
+import com.psj.user.websocket.DemoSocket;
 import com.psj.web.result.Resp;
 import com.psj.user.convert.UserConverter;
 import com.psj.user.entity.dto.UserDto;
@@ -10,8 +14,13 @@ import com.psj.user.entity.req.UserReq;
 import com.psj.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.commons.lang3.time.DateFormatUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -27,6 +36,9 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private DemoSocket demoSocket;
+
 
    /**
     * 新增用户
@@ -41,7 +53,9 @@ public class UserController {
     public Resp addUser(@RequestBody UserAddReq userAddReq) {
         UserDto userDto = UserConverter.INSTANCE.converAddReqToUserDto(userAddReq);
         int i = userService.addUser(userDto);
+        demoSocket.sendMessage("新增成功,新增条数:" + 1);
         return Resp.succcess("新增成功,新增条数:" + 1);
+
     }
 
     /**
@@ -70,9 +84,26 @@ public class UserController {
      **/
     @GetMapping("/getUserPage")
     @ApiOperation(value = "获取用户表列表", notes = "分页获取用户表列表")
-    public Resp getUserPage( UserReq userReq) {
+    public Resp getUserPage( @Valid UserReq userReq) {
         UserDto userDto = UserConverter.INSTANCE.converReqToUserDto(userReq);
         PageResult<UserPo> userPage = userService.getUserPage(userDto);
         return Resp.succcess(userPage);
+    }
+    public static String formatDate(Date date, Object... pattern) {
+        if(date == null){return null;} //处理异常
+        String formatDate = null;
+        if (pattern != null && pattern.length > 0) {
+            formatDate = DateFormatUtils.format(date, pattern[0].toString());
+        } else {
+            formatDate = DateFormatUtils.format(date, "yyyy-MM-dd");
+        }
+        return formatDate;
+    }
+
+    
+    public static void main(String[] args) {
+       String  va="";
+
+        System.out.println( String.valueOf(va));
     }
 }

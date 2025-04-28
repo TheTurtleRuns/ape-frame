@@ -1,7 +1,8 @@
 package com.psj.user.test;
 
-import com.psj.redis.utils.RedisUtil;
 import com.psj.user.UserApplication;
+import com.psj.user.designpattern.mydisign.MyPayHandlerDemo;
+import com.psj.user.designpattern.stragetypattern.PayHandlerDemo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,14 +21,15 @@ import javax.annotation.Resource;
 @RunWith(SpringRunner.class)
 @Slf4j
 public class RedisUtilTest {
+    @Resource
+    MyPayHandlerDemo myPayHandlerDemo;
 
     @Resource
-    private RedisUtil redisUtil;
-
+    PayHandlerDemo payHandlerDemo;
     @Test
     public void testCompareAndSet() throws Exception {
-        Boolean result = redisUtil.compareAndSet("luaCas", 2L, 3L);
-        log.info("RedisUtilTest.testCompareAndSet.result:{}", result);
+        payHandlerDemo.dealPay(0);
+        myPayHandlerDemo.dealPay(2);
     }
 
 }

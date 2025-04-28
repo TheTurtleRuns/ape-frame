@@ -5,7 +5,7 @@ import com.psj.user.designpattern.mydisign.MyPayChannelEnum;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BankPayHandler extends AbstractPayHandler {
+public class MyBankPayHandler extends AbstractPayHandler {
 
     @Override
     public void dopay(int code) {

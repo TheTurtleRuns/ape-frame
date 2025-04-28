@@ -2,7 +2,9 @@ package com.psj.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.psj.user.entity.dto.UserDto;
 import com.psj.user.entity.po.UserPo;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @author pengshj
@@ -11,5 +13,5 @@ import com.psj.user.entity.po.UserPo;
  * @description TODO
  */
 public interface UserMapper extends BaseMapper<UserPo> {
-    IPage<UserPo>  getUserPage(IPage<UserPo> userPoIPage);
+    IPage<UserPo>  getUserPage(@Param("userPoIPage") IPage<UserPo> userPoIPage , @Param("userDto") UserDto userDto);
 }

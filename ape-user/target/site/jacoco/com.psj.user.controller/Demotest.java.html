@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Demotest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ape-user</a> &gt; <a href="index.source.html" class="el_package">com.psj.user.controller</a> &gt; <span class="el_source">Demotest.java</span></div><h1>Demotest.java</h1><pre class="source lang-java linenums">package com.psj.user.controller;
+
+import com.google.common.collect.Maps;
+
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.stream.Collectors;
+
+/**
+ * @author pengshj
+ * @version 1.0
+ * @date 2025/3/6-15:07
+ * @description TODO
+ */
+<span class="nc" id="L15">public class Demotest {</span>
+<span class="nc" id="L16">    static Integer num = 123;</span>
+<span class="nc" id="L17">    static Integer num3 = 123;</span>
+<span class="nc" id="L18">    static Integer num4 = 300;</span>
+<span class="nc" id="L19">    static Integer num5 = 300;</span>
+<span class="nc" id="L20">    static int num2 = 2;</span>
+
+
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+
+       /* Thread thread = new Thread();
+        thread.getId();
+        thread.getId();
+        thread.getId();
+
+        String ss=&quot;66&quot;;
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Callable&lt;String&gt; callable = () -&gt; {
+            System.out.println(&quot;Entered Callable&quot;);
+            Thread.sleep(2000);
+            return &quot;Hello from Callable&quot;;
+        };
+
+        System.out.println(&quot;Submitting Callable&quot;);
+        Future&lt;String&gt; future = executor.submit(callable);
+
+        System.out.println(&quot;Do something else while callable is getting executed&quot;);
+        System.out.println(&quot;Retrieved: &quot; + future.get());
+
+        executor.shutdown();
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+    /*    Callable&lt;String&gt; callable = () -&gt; {
+            System.out.println(&quot;Entered Callable&quot;);
+            Thread.sleep(2000);
+            return &quot;Hello from Callable&quot;;
+        };
+
+        FutureTask&lt;String&gt; futureTask = new FutureTask&lt;&gt;(callable);
+        Thread thread = new Thread(futureTask);
+        thread.start();
+        System.out.println(&quot;Do something else while callable is getting executed&quot;);
+        System.out.println(&quot;Retrieved: &quot; + futureTask.get());*/
+
+
+
+
+      /*  ArrayList&lt;Object&gt; objects = new ArrayList&lt;&gt;();
+        TreeSet&lt;String&gt; treeSet = new TreeSet&lt;&gt;();
+        LinkedHashSet&lt;String&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
+        linkedHashSet.add(&quot;sss&quot;);
+        TreeMap&lt;String, String&gt; stringStringTreeMap = new TreeMap&lt;&gt;();
+        stringStringTreeMap.put(&quot;7777&quot;,&quot;7777&quot;);
+        treeSet.add(&quot;7777&quot;);
+        treeSet.add(&quot;8888&quot;);
+        Iterator&lt;String&gt; iterator = treeSet.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }*/
+
+
+       /* ArrayList&lt;String&gt; strings = new ArrayList&lt;&gt;();
+        strings.add(&quot;6666&quot;);
+        strings.add(&quot;8888&quot;);
+        strings.add(&quot;9999&quot;);
+        strings.add(&quot;11111&quot;);
+        strings.add(&quot;222222&quot;);
+        List&lt;String&gt; subList = strings.subList(0, 2);
+        System.out.println(&quot;strings=====&quot;+strings.toString());
+        System.out.println(&quot;subList=====&quot;+subList.toString());
+        //strings.add(&quot;5555555&quot;);
+        System.out.println(&quot;subListset=====&quot;+subList.toString());
+        System.out.println(&quot;stringsset=====&quot;+strings.toString());
+        System.out.println(strings.parallelStream().map(s -&gt;s.equals(&quot;9999&quot;)).collect(Collectors.toList()).toString());
+
+
+        System.out.println(6%8);
+        System.out.println(6&amp;7);
+        Map&lt;String,String&gt;map=Maps.newHashMapWithExpectedSize(7);
+        ConcurrentHashMap cmap=  new ConcurrentHashMap&lt;&gt;();
+        cmap.put(&quot;11&quot;,&quot;222&quot;);*/
+      /*
+       LinkedList&lt;String&gt; linkedList = new LinkedList&lt;&gt;();
+       linkedList.add(&quot;666666&quot;);
+        linkedList.add(&quot;22222&quot;);
+        linkedList.add(1,&quot;333333&quot;);
+        Iterator&lt;String&gt; stringIterator = linkedList.iterator();
+        while (stringIterator.hasNext()){
+            System.out.println(stringIterator.next());
+        }
+        System.out.println(&quot;peek该方法用于检索但不移除链表的第一个元素。如果链表为空&quot;+linkedList.peek());
+        System.out.println(&quot;poll检索并删除此列表的头部（第一个元素）如果此列表为空则返回null&quot;+linkedList.poll());
+
+        System.out.println(linkedList.toString());
+        HashSet&lt;String&gt; hashSet = new HashSet&lt;&gt;();
+        hashSet.add(&quot;99999&quot;);
+        hashSet.add(&quot;101010&quot;);
+        System.out.println(hashSet.contains(&quot;101010&quot;));*/
+
+
+       //System.out.println(0.1+0.2);
+<span class="nc" id="L127">        List&lt;String&gt; strings = new ArrayList&lt;String&gt;();</span>
+<span class="nc" id="L128">        strings.add(&quot;55555&quot;);</span>
+<span class="nc" id="L129">        strings.add(&quot;66666&quot;);</span>
+<span class="nc" id="L130">        strings.add(&quot;77777&quot;);</span>
+<span class="nc" id="L131">        strings.add(&quot;88888&quot;);</span>
+       // strings.subList(0,1);
+<span class="nc bnc" id="L133" title="All 2 branches missed.">        for (String s:strings) {</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">            if (s.equals(&quot;77777&quot;)){</span>
+<span class="nc" id="L135">                strings.remove(s);</span>
+               // strings.add(&quot;99999&quot;);
+
+            }
+
+<span class="nc" id="L140">        }</span>
+<span class="nc" id="L141">        System.out.println(strings.toString());</span>
+    //add(strings,&quot;4444&quot;);
+   // find(strings);
+<span class="nc" id="L144">}</span>
+
+
+
+
+
+
+    public  static   &lt;T extends Comparable&lt;T&gt;&gt; void  find(List&lt;T&gt; list){
+<span class="nc" id="L152">        System.out.println(&quot;我是find&quot;);</span>
+<span class="nc" id="L153">        list.forEach(t -&gt; {</span>
+<span class="nc" id="L154">            System.out.println(t.toString());</span>
+<span class="nc" id="L155">        } );</span>
+<span class="nc" id="L156">    }</span>
+
+    public  static   &lt;T &gt; void  add(List&lt;? super T&gt; list,T element){
+<span class="nc" id="L159">        list.add(element);</span>
+<span class="nc" id="L160">        System.out.println(&quot;我是add&quot;);</span>
+<span class="nc" id="L161">        list.forEach(t -&gt; {</span>
+<span class="nc" id="L162">            System.out.println(t.toString());</span>
+<span class="nc" id="L163">        } );</span>
+<span class="nc" id="L164">    }</span>
+
+    }
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

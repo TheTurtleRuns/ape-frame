@@ -8,8 +8,6 @@ import com.psj.user.entity.dto.UserDto;
 import com.psj.user.entity.po.UserPo;
 import com.psj.user.mapper.UserMapper;
 import com.psj.user.service.UserService;
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,11 +37,10 @@ public class UserServiceImpl implements UserService {
     public int deleteUser(Integer id) {
         return userMapper.deleteById(id);
     }
-
     @Override
     public PageResult<UserPo> getUserPage(UserDto userDto) {
         IPage<UserPo> userPoIPage = new Page<>(userDto.getPageIndex(), userDto.getPageSize());
-        IPage<UserPo> userPage = userMapper.getUserPage(userPoIPage);
+        IPage<UserPo> userPage = userMapper.getUserPage(userPoIPage,userDto);
         PageResult<UserPo> pageresult = new PageResult<>();
         pageresult.loadData(userPage);
         return pageresult;

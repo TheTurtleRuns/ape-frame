@@ -1,4 +1,6 @@
-package com.psj.user.designpattern.mydisign.handler;
+package com.psj.user.designpattern.mydisign;
+
+import com.psj.user.designpattern.stragetypattern.PayChannelEnum;
 
 /**
  * @author pengshj
@@ -7,5 +9,6 @@ package com.psj.user.designpattern.mydisign.handler;
  * @description TODO
  */
 public interface MyPayHandler {
-    public void  pay(String code);
+    MyPayChannelEnum getChannel();
+     void  pay(int code);
 }

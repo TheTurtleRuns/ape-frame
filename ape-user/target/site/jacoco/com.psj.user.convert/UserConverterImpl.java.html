@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserConverterImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ape-user</a> &gt; <a href="index.source.html" class="el_package">com.psj.user.convert</a> &gt; <span class="el_source">UserConverterImpl.java</span></div><h1>UserConverterImpl.java</h1><pre class="source lang-java linenums">package com.psj.user.convert;
+
+import com.psj.user.entity.dto.UserDto;
+import com.psj.user.entity.po.UserPo;
+import com.psj.user.entity.req.UserAddReq;
+import com.psj.user.entity.req.UserReq;
+import javax.annotation.Generated;
+
+@Generated(
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+    date = &quot;2025-03-26T16:17:07+0800&quot;,
+    comments = &quot;version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0_431 (Oracle Corporation)&quot;
+)
+<span class="nc" id="L14">public class UserConverterImpl implements UserConverter {</span>
+
+    @Override
+    public UserDto converReqToUserDto(UserReq userReq) {
+<span class="nc bnc" id="L18" title="All 2 branches missed.">        if ( userReq == null ) {</span>
+<span class="nc" id="L19">            return null;</span>
+        }
+
+<span class="nc" id="L22">        UserDto userDto = new UserDto();</span>
+
+<span class="nc" id="L24">        userDto.setName( userReq.getName() );</span>
+<span class="nc" id="L25">        userDto.setAge( userReq.getAge() );</span>
+<span class="nc" id="L26">        userDto.setPageSize( userReq.getPageSize() );</span>
+<span class="nc" id="L27">        userDto.setPageIndex( userReq.getPageIndex() );</span>
+
+<span class="nc" id="L29">        return userDto;</span>
+    }
+
+    @Override
+    public UserPo converDtoToUserPo(UserDto userDto) {
+<span class="nc bnc" id="L34" title="All 2 branches missed.">        if ( userDto == null ) {</span>
+<span class="nc" id="L35">            return null;</span>
+        }
+
+<span class="nc" id="L38">        UserPo userPo = new UserPo();</span>
+
+<span class="nc" id="L40">        userPo.setName( userDto.getName() );</span>
+<span class="nc" id="L41">        userPo.setAge( userDto.getAge() );</span>
+
+<span class="nc" id="L43">        return userPo;</span>
+    }
+
+    @Override
+    public UserDto converAddReqToUserDto(UserAddReq userAddReq) {
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        if ( userAddReq == null ) {</span>
+<span class="nc" id="L49">            return null;</span>
+        }
+
+<span class="nc" id="L52">        UserDto userDto = new UserDto();</span>
+
+<span class="nc" id="L54">        userDto.setName( userAddReq.getName() );</span>
+<span class="nc" id="L55">        userDto.setAge( userAddReq.getAge() );</span>
+
+<span class="nc" id="L57">        return userDto;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

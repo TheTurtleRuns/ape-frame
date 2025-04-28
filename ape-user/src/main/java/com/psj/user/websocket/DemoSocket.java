@@ -15,6 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @ServerEndpoint(value = "/chicken/socket", configurator = WebSocketServerConfig.class)
 @Component
 public class DemoSocket {
+    private static ConcurrentHashMap<String, DemoSocket> webSocketSet = new ConcurrentHashMap<>();
 
     /**
      * 记录当前在线连接数
@@ -35,7 +36,7 @@ public class DemoSocket {
      * erp唯一标识
      */
     private String erp = "";
-
+    private String id ;
     /**
      * 连接建立成功调用的方法
      */
@@ -88,7 +89,7 @@ public class DemoSocket {
         if (message.equals("ping")) {
             this.sendMessage("pong", session);
         }
-    }
+     }
 
     @OnError
     public void onError(Session session, Throwable error) {

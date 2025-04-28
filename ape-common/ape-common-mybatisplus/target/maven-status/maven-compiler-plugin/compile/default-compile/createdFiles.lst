@@ -1,0 +1,5 @@
+com\psj\common\mybatisplus\entity\BaseEntity.class
+com\psj\common\mybatisplus\handler\MyMetaObjectHandler.class
+com\psj\common\mybatisplus\config\MybatisConfig.class
+com\psj\common\mybatisplus\entity\PageResult.class
+com\psj\common\mybatisplus\inteceptor\SqlBeautyInterceptor.class

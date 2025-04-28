@@ -1,0 +1,304 @@
+2025-04-09 07:01:56  [main] INFO  com.psj.user.UserApplication - Starting UserApplication using Java 1.8.0_431 on pengshj with PID 27464 (E:\workerIde\ape-frame\ape-user\target\classes started by psj in E:\workerIde\ape-frame)
+2025-04-09 07:01:56  [main] INFO  com.psj.user.UserApplication - The following profiles are active: local
+2025-04-09 07:01:58  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-09 07:01:58  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-09 07:01:58  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+2025-04-09 07:01:58  [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-09 07:02:01  [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-09 07:02:03  [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-09 07:02:07  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-09 07:02:08  [main] INFO  com.psj.user.UserApplication - Started UserApplication in 12.485 seconds (JVM running for 15.024)
+2025-04-09 07:02:17  [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-09 07:02:17 664835219781718016 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：psj，当前在线人数为：1
+2025-04-09 07:02:17 664835219781718016 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息连接成功
+2025-04-09 07:02:59  [http-nio-8080-exec-2] INFO  com.psj.user.websocket.DemoSocket - 服务端收到客户端[psj]的消息:111111111111
+
+
+2025-04-09 07:03:36  [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 服务端收到客户端[psj]的消息:111111111111
+
+ping
+2025-04-09 07:03:59 664835648271814656 [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：ddd，当前在线人数为：2
+2025-04-09 07:03:59 664835648271814656 [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息连接成功
+2025-04-09 07:04:04  [http-nio-8080-exec-5] INFO  com.psj.user.websocket.DemoSocket - 服务端收到客户端[ddd]的消息:ping
+2025-04-09 07:04:04  [http-nio-8080-exec-5] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息pong
+2025-04-09 07:05:11  [http-nio-8080-exec-6] INFO  com.psj.user.websocket.DemoSocket - 服务端收到客户端[ddd]的消息:ping
+2025-04-09 07:05:11  [http-nio-8080-exec-6] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息pong
+2025-04-09 07:06:07  [SpringApplicationShutdownHook] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：ddd，当前在线人数为：1
+2025-04-09 07:06:07  [SpringApplicationShutdownHook] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：psj，当前在线人数为：0
+2025-04-09 07:06:07  [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-09 07:06:07  [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-09 07:06:14  [main] INFO  com.psj.user.UserApplication - Starting UserApplication using Java 1.8.0_431 on pengshj with PID 4260 (E:\workerIde\ape-frame\ape-user\target\classes started by psj in E:\workerIde\ape-frame)
+2025-04-09 07:06:14  [main] INFO  com.psj.user.UserApplication - The following profiles are active: local
+2025-04-09 07:06:15  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-09 07:06:15  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-09 07:06:15  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+2025-04-09 07:06:16  [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-09 07:06:19  [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-09 07:06:20  [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-09 07:06:24  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-09 07:06:24  [main] INFO  com.psj.user.UserApplication - Started UserApplication in 11.196 seconds (JVM running for 13.46)
+2025-04-09 07:06:49  [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-09 07:06:49 664836362977021952 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：psj，当前在线人数为：1
+2025-04-09 07:06:49 664836362977021952 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息连接成功
+2025-04-09 07:06:55 664836387031355392 [http-nio-8080-exec-2] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：ddd，当前在线人数为：2
+2025-04-09 07:06:55 664836387031355392 [http-nio-8080-exec-2] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息连接成功
+2025-04-09 07:06:58  [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 服务端收到客户端[ddd]的消息:ping
+2025-04-09 07:06:58  [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息pong
+2025-04-09 07:06:58  [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息10086
+2025-04-09 07:06:58  [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息10086
+2025-04-09 07:07:07  [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 服务端收到客户端[ddd]的消息:ping
+2025-04-09 07:07:07  [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息pong
+2025-04-09 07:07:07  [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息10086
+2025-04-09 07:07:07  [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息10086
+2025-04-09 07:19:05  [SpringApplicationShutdownHook] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：psj，当前在线人数为：1
+2025-04-09 07:19:05  [SpringApplicationShutdownHook] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：ddd，当前在线人数为：0
+2025-04-09 07:19:05  [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-09 07:19:05  [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-09 07:19:12  [main] INFO  com.psj.user.UserApplication - Starting UserApplication using Java 1.8.0_431 on pengshj with PID 12168 (E:\workerIde\ape-frame\ape-user\target\classes started by psj in E:\workerIde\ape-frame)
+2025-04-09 07:19:12  [main] INFO  com.psj.user.UserApplication - The following profiles are active: local
+2025-04-09 07:19:13  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-09 07:19:13  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-09 07:19:13  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+2025-04-09 07:19:13  [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-09 07:19:16  [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-09 07:19:18  [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-09 07:19:34  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-09 07:19:35  [main] INFO  com.psj.user.UserApplication - Started UserApplication in 23.978 seconds (JVM running for 26.227)
+2025-04-09 07:20:07  [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-09 07:20:16 664839746433978368 [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：ddd，当前在线人数为：1
+2025-04-09 07:20:16 664839746433978368 [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息连接成功
+2025-04-09 07:20:18 664839756210900992 [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：psj，当前在线人数为：2
+2025-04-09 07:20:18 664839756210900992 [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息连接成功
+2025-04-09 07:22:10 664840211464851456 [http-nio-8080-exec-9] INFO  com.psj.log.LogAspect - com.psj.user.controller.UserController.addUser,req:[{"name":"1754074296823062530"}]
+2025-04-09 07:22:14 664840211464851456 [http-nio-8080-exec-9] INFO  com.psj.log.LogAspect - com.psj.user.service.impl.UserServiceImpl.addUser,req:[{"name":"1754074296823062530"}]
+2025-04-09 07:22:22 664840211464851456 [http-nio-8080-exec-9] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1
+### The error may exist in com/psj/user/mapper/UserMapper.java (best guess)
+### The error may involve com.psj.user.mapper.UserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user  ( name,  create_by, create_time, update_by, update_time, delete_flag, version )  VALUES  ( ?,  ?, ?, ?, ?, ?, ? )
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1
+; Data truncation: Data too long for column 'name' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1] with root cause
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3461) ~[druid-1.1.21.jar:1.1.21]
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440) ~[druid-1.1.21.jar:1.1.21]
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459) ~[druid-1.1.21.jar:1.1.21]
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167) ~[druid-1.1.21.jar:1.1.21]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497) ~[druid-1.1.21.jar:1.1.21]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_431]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_431]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_431]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_431]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.sun.proxy.$Proxy168.execute(Unknown Source) ~[?:?]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.5.jar:3.5.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_431]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_431]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_431]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_431]
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.psj.common.mybatisplus.inteceptor.SqlBeautyInterceptor.intercept(SqlBeautyInterceptor.java:33) ~[classes/:?]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.sun.proxy.$Proxy166.update(Unknown Source) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_431]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_431]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_431]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_431]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.sun.proxy.$Proxy166.update(Unknown Source) ~[?:?]
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:56) ~[mybatis-plus-core-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:85) ~[mybatis-plus-core-3.4.0.jar:3.4.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_431]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_431]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_431]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_431]
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:82) ~[mybatis-plus-extension-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.sun.proxy.$Proxy165.update(Unknown Source) ~[?:?]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.5.jar:3.5.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_431]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_431]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_431]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_431]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at com.sun.proxy.$Proxy114.insert(Unknown Source) ~[?:?]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60) ~[mybatis-plus-core-3.4.0.jar:3.4.0]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148) ~[mybatis-plus-core-3.4.0.jar:3.4.0]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.4.0.jar:3.4.0]
+	at com.sun.proxy.$Proxy120.insert(Unknown Source) ~[?:?]
+	at com.psj.user.service.impl.UserServiceImpl.addUser(UserServiceImpl.java:32) ~[classes/:?]
+	at com.psj.user.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$1e2a1284.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.9.jar:5.3.9]
+	at com.psj.log.LogAspect.around(LogAspect.java:36) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_431]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_431]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_431]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_431]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692) ~[spring-aop-5.3.9.jar:5.3.9]
+	at com.psj.user.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$54e19a4b.addUser(<generated>) ~[classes/:?]
+	at com.psj.user.controller.UserController.addUser(UserController.java:55) ~[classes/:?]
+	at com.psj.user.controller.UserController$$FastClassBySpringCGLIB$$c23c4daa.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.9.jar:5.3.9]
+	at com.psj.log.LogAspect.around(LogAspect.java:36) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_431]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_431]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_431]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_431]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692) ~[spring-aop-5.3.9.jar:5.3.9]
+	at com.psj.user.controller.UserController$$EnhancerBySpringCGLIB$$c56ba956.addUser(<generated>) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_431]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_431]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_431]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_431]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at com.psj.web.trace.TraceIdFilter.doFilter(TraceIdFilter.java:30) ~[classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_431]
+2025-04-09 07:22:53 664840396291051520 [http-nio-8080-exec-10] INFO  com.psj.log.LogAspect - com.psj.user.controller.UserController.addUser,req:[{"name":"ll"}]
+2025-04-09 07:22:55 664840396291051520 [http-nio-8080-exec-10] INFO  com.psj.log.LogAspect - com.psj.user.service.impl.UserServiceImpl.addUser,req:[{"name":"ll"}]
+2025-04-09 07:22:55 664840396291051520 [http-nio-8080-exec-10] INFO  com.psj.log.LogAspect - com.psj.user.service.impl.UserServiceImpl.addUser,response:1,costTime:275
+2025-04-09 07:22:55 664840396291051520 [http-nio-8080-exec-10] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息新增成功,新增条数:1
+2025-04-09 07:22:55 664840396291051520 [http-nio-8080-exec-10] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息新增成功,新增条数:1
+2025-04-09 07:22:55 664840396291051520 [http-nio-8080-exec-10] INFO  com.psj.log.LogAspect - com.psj.user.controller.UserController.addUser,response:{"code":200,"msg":"成功","success":true,"data":"新增成功,新增条数:1"},costTime:2635
+2025-04-09 07:23:23 664840532291358720 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：ddd，当前在线人数为：1
+2025-04-09 07:23:23 664840532291358720 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：ddd，当前在线人数为：1
+2025-04-09 07:23:23 664840532291358720 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息连接成功
+2025-04-09 07:24:10 664839746433978368 [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：ddd，当前在线人数为：0
+2025-04-09 07:24:11 664840732657455104 [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：jjj，当前在线人数为：1
+2025-04-09 07:24:11 664840732657455104 [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[jjj]发送消息连接成功
+2025-04-09 07:24:16 664839811596685312 [http-nio-8080-exec-5] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：jjj，当前在线人数为：0
+2025-04-09 07:24:26 664840796184383488 [http-nio-8080-exec-6] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：ddd，当前在线人数为：1
+2025-04-09 07:24:26 664840796184383488 [http-nio-8080-exec-6] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息连接成功
+2025-04-09 07:24:46 664840876681465856 [http-nio-8080-exec-7] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：jjj，当前在线人数为：2
+2025-04-09 07:24:46 664840876681465856 [http-nio-8080-exec-7] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[jjj]发送消息连接成功
+2025-04-09 07:25:07 664839970225262592 [http-nio-8080-exec-8] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：jjj，当前在线人数为：1
+2025-04-09 07:25:51 664841137659449344 [http-nio-8080-exec-9] INFO  com.psj.log.LogAspect - com.psj.user.controller.UserController.addUser,req:[{"name":"ll22"}]
+2025-04-09 07:25:51 664841137659449344 [http-nio-8080-exec-9] INFO  com.psj.log.LogAspect - com.psj.user.service.impl.UserServiceImpl.addUser,req:[{"name":"ll22"}]
+2025-04-09 07:25:51 664841137659449344 [http-nio-8080-exec-9] INFO  com.psj.log.LogAspect - com.psj.user.service.impl.UserServiceImpl.addUser,response:1,costTime:20
+2025-04-09 07:25:52 664841137659449344 [http-nio-8080-exec-9] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息新增成功,新增条数:1
+2025-04-09 07:25:52 664841137659449344 [http-nio-8080-exec-9] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息新增成功,新增条数:1
+2025-04-09 07:25:52 664841137659449344 [http-nio-8080-exec-9] INFO  com.psj.log.LogAspect - com.psj.user.controller.UserController.addUser,response:{"code":200,"msg":"成功","success":true,"data":"新增成功,新增条数:1"},costTime:60
+2025-04-09 07:26:07 664841217040846848 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：jjj，当前在线人数为：2
+2025-04-09 07:26:07 664841217040846848 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[jjj]发送消息连接成功
+2025-04-09 07:27:20  [http-nio-8080-exec-2] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：jjj，当前在线人数为：1
+2025-04-09 07:27:27 664841553721823232 [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：jjj，当前在线人数为：2
+2025-04-09 07:27:27 664841553721823232 [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[jjj]发送消息连接成功
+2025-04-09 07:27:37 664840732657455104 [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：ddd，当前在线人数为：1
+2025-04-09 07:27:38 664839811596685312 [http-nio-8080-exec-5] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：psj，当前在线人数为：0
+2025-04-09 07:27:43 664841622395162624 [http-nio-8080-exec-6] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：psj，当前在线人数为：1
+2025-04-09 07:27:43 664841622395162624 [http-nio-8080-exec-6] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息连接成功
+2025-04-09 07:28:03 664840876681465856 [http-nio-8080-exec-7] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：jjj，当前在线人数为：0
+2025-04-09 07:28:24 664839970225262592 [http-nio-8080-exec-8] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：psj，当前在线人数为：-1
+2025-04-09 07:28:28 664841807686930432 [http-nio-8080-exec-9] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：jjj，当前在线人数为：0
+2025-04-09 07:28:28 664841807686930432 [http-nio-8080-exec-9] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[jjj]发送消息连接成功
+2025-04-09 07:28:48  [SpringApplicationShutdownHook] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：jjj，当前在线人数为：-1
+2025-04-09 07:28:48  [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-09 07:28:48  [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-09 07:28:55  [main] INFO  com.psj.user.UserApplication - Starting UserApplication using Java 1.8.0_431 on pengshj with PID 14276 (E:\workerIde\ape-frame\ape-user\target\classes started by psj in E:\workerIde\ape-frame)
+2025-04-09 07:28:55  [main] INFO  com.psj.user.UserApplication - The following profiles are active: local
+2025-04-09 07:28:57  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-09 07:28:57  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-09 07:28:57  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+2025-04-09 07:28:57  [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-09 07:29:00  [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-09 07:29:02  [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-09 07:29:06  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-09 07:29:06  [main] INFO  com.psj.user.UserApplication - Started UserApplication in 11.788 seconds (JVM running for 14.015)
+2025-04-09 07:29:09  [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-09 07:29:09 664841983478599680 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：jjj，当前在线人数为：1
+2025-04-09 07:29:09 664841983478599680 [http-nio-8080-exec-1] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[jjj]发送消息连接成功
+2025-04-09 07:29:15 664842005863600128 [http-nio-8080-exec-2] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：ddd，当前在线人数为：2
+2025-04-09 07:29:15 664842005863600128 [http-nio-8080-exec-2] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息连接成功
+2025-04-09 07:29:19 664842024867991552 [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：psj，当前在线人数为：3
+2025-04-09 07:29:19 664842024867991552 [http-nio-8080-exec-3] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息连接成功
+2025-04-09 07:29:28  [http-nio-8080-exec-4] INFO  com.psj.user.websocket.DemoSocket - 有一连接关闭：jjj，当前在线人数为：2
+2025-04-09 07:30:14 664842254254477312 [http-nio-8080-exec-5] INFO  com.psj.log.LogAspect - com.psj.user.controller.UserController.addUser,req:[{"name":"l2l22"}]
+2025-04-09 07:30:14 664842254254477312 [http-nio-8080-exec-5] INFO  com.psj.log.LogAspect - com.psj.user.service.impl.UserServiceImpl.addUser,req:[{"name":"l2l22"}]
+2025-04-09 07:30:14 664842254254477312 [http-nio-8080-exec-5] INFO  com.psj.log.LogAspect - com.psj.user.service.impl.UserServiceImpl.addUser,response:1,costTime:100
+2025-04-09 07:30:14 664842254254477312 [http-nio-8080-exec-5] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[ddd]发送消息新增成功,新增条数:1
+2025-04-09 07:30:14 664842254254477312 [http-nio-8080-exec-5] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[psj]发送消息新增成功,新增条数:1
+2025-04-09 07:30:14 664842254254477312 [http-nio-8080-exec-5] INFO  com.psj.log.LogAspect - com.psj.user.controller.UserController.addUser,response:{"code":200,"msg":"成功","success":true,"data":"新增成功,新增条数:1"},costTime:166
+2025-04-09 07:30:27 664842308524576768 [http-nio-8080-exec-7] INFO  com.psj.user.websocket.DemoSocket - 有新连接加入：jjj，当前在线人数为：3
+2025-04-09 07:30:27 664842308524576768 [http-nio-8080-exec-7] INFO  com.psj.user.websocket.DemoSocket - 服务端给客户端[jjj]发送消息连接成功

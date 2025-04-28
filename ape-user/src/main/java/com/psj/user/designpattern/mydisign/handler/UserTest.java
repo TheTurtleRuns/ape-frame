@@ -1,7 +1,15 @@
-package com.psj.user.designpattern.mydisign.handler;/**
- * @author  pengshj
- * @date    2025/3/19-14:02
+package com.psj.user.designpattern.mydisign.handler;
+
+import lombok.Data;
+
+/**
+ * @author pengshj
  * @version 1.0
- * @description  TODO
- */public class UserTest {
+ * @date 2025/3/19-14:02
+ * @description TODO
+ */
+@Data
+public class UserTest {
+
+    private  UserPermission  userPermission;
 }

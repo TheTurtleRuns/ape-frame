@@ -4,8 +4,7 @@ public enum PayChannelEnum {
 
     ZFB_PAY(0, "支付宝支付"),
     WX_PAY(1, "微信支付"),
-    BANK_PAY(2, "银行卡支付"),
-    ;
+    BANK_PAY(2, "银行卡支付");
 
     private int code;
 
